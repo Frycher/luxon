@@ -48,6 +48,7 @@ export const FooterCharacter = styled.img`
 export const FooterSocial = styled.div`
 	display: flex;
 	flex-direction: column;
+	align-items: flex-end;
 	gap: 12px;
 	@media (max-width: 1200px) {
 		align-items: center;
