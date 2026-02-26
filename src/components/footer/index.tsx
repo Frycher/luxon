@@ -60,9 +60,20 @@ export const Footer = () => {
 				</FooterRestriction>
 			</FooterLeft>
 			<FooterRight>
-				<Select value={locale} onChange={(e) => updateLocale(e.target.value)} sx={{ width: '280px', margin: '0 auto' }}>
+				<Select
+					value={locale}
+					onChange={(e) => updateLocale(e.target.value)}
+					sx={{ width: '280px', margin: '0 auto' }}
+					SelectDisplayProps={{
+						style: {
+							display: 'flex',
+							alignItems: 'center',
+							gap: '8px',
+						},
+					}}>
 					{LANGUAGES.map((language) => (
-						<MenuItem key={language} value={language}>
+						<MenuItem key={language} value={language} sx={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+							<img src={`/language/${language}.png`} alt={language} style={{ width: 24, height: 24 }} />
 							{LANGUAGES_LABELS[language]}
 						</MenuItem>
 					))}
