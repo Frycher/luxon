@@ -8,6 +8,7 @@ export const FrameWrapper = styled.div`
 	flex-direction: column;
 	flex-grow: 1;
 	min-height: 100vh;
+	padding: 0 15px;
 	position: relative;
 	background-image: url(${img});
 	background-size: cover;
